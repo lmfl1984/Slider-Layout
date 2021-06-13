@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Hello, world!</title>
+  </head>
+
+<!-- table of contents 
+ - header
+ - main block
+ - pharm list
+ - other link
+ - when block
+ - footer
+-->
+
+<body>
+    <div class="grid-wrapper">
+
+      <!-- header -->
+
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo"><p>Препарат</p></div>
+          <nav class="header__nav">
+            <ul class="nav">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Научные работы</a></li>
+              <li><a href="#">Инструкция</a></li>
+              <li><a href="#">Рекомендации</a></li>
+              <li><a href="#">Где купить</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- main block -->
+
+      <main class="main">
+        <div class="main__container">
+          <h1>Где купить препарат</h1>
+          <div class="slaider-grid">
+            <div class="slaider_logo">
+              <p>Дорогой доктор, проанализировав все онлайн аптеки, мы выяснили, что самые лучшие цены здесь:</p>
+              <img src="img/pharm1.png" alt="Аптека с лучшей ценой">
+            </div>
+            <div class="stub-block"></div>
+            <div class="slaider">
+              <div class="slaider__item">
+                <img data-lazy="img/slick.png" alt="первый слайд">
+              </div>
+              <div class="slaider__item">
+                <img data-lazy="img/slick.png" alt="второй слайд">
+              </div>
+            </div>
+
+      <!-- pharm list -->
+
+            <p>Также вы сможете найти препарат в следующих аптеках:</p><br>
+            <div class="items-grid">
+              <div class="image-item1">
+                <a href="#"><img src="img/pharm2.png" alt="Аптека"></a>
+              </div>
+              <div class="image-item2">
+                <a href="#"><img src="img/pharm3.png" alt="Аптека"></a>
+              </div>
+              <div class="image-item3">
+                <a href="#"><img src="img/pharm4.png" alt="Аптека"></a>
+              </div>
+            </div>
+          </div>
+
+      <!-- other link -->
+            <div class="other_link_grid">
+              <div class="other_link__aggregators">
+                <p>Если вы хотите найти препарат по другим критериям, воспользуйтесь аггрегаторами:</p><br>
+                <ul class="other_link__aggregators__list">
+                  <li><a href="#">Аггрегатор1             
+                    <div class="arrow-1">
+                      <div></div>
+                    </div>
+                  </a></li>
+                  <li><a href="#">Аггрегатор2
+                    <div class="arrow-1">
+                      <div></div>
+                    </div>
+                  </a></li>
+                </ul>
+              </div>
+              <div class="other_link__ymarket">
+                <p>Теперь, препарат можно найти в Яндекс Маркет:</p><br>
+                <a href="#"><img src="img/yamarket.png" alt="yandex market"></a>
+              </div>
+            </div>
+        </div>
+      </main>
+
+      <!-- when block -->
+
+      <section class="when-use">
+        <div class="when__container">
+          <div class="when__grid">
+            <div class="when__item when__item1">
+              <img src="img/patologic.png" alt="Кишечник">
+              <p id="firstP">Патология</p>
+              <p>Алгоритмы диагностики и лечения</p>
+            </div>
+            <div class="when__item when__item2">
+              <img src="img/gkt.png" alt="Желудок">
+              <p id="firstP">Нарушение</p>
+              <p>Нарушения жкт</p>
+            </div>
+            <div class="when__item when__item3">
+              <img src="img/instruction.png" alt="Инструкция">
+              <p id="firstP">Инструкция</p>
+              <p>Профилактика и лечение</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- footer -->
+
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__grid">
+            <div class="footer__info">
+              <p>Информация на сайте о препарате не должна использоваться для самостоятельной диагностики и лечения и не может быть заменой очной консультации врача.</p>
+              <a href="#">Все права защищены.</a>
+            </div>
+            <div class="footer__links">
+              <ul class="footer__links__ul1">
+                <li><a href="#">Научные работы</a></li>
+                <li><a href="#">Инструкции</a></li>
+                <li><a href="#">Рекомендации</a></li>
+              </ul>
+              <ul class="footer__links__ul2">
+                <li><a href="#">Где купить</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer> 
+    </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

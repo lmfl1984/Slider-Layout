@@ -1,0 +1,354 @@
+@import "nulcss.scss";
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/Roboto-Medium.ttf);
+	src: url(../fonts/Roboto-Bold.ttf);
+	
+	src: url(../fonts/Roboto-Regular.ttf);
+}
+$maxWidth: 1200;
+@mixin adaptfz($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+	/* table of contents 
+	- wraper
+	- header
+	- main block 
+	- pharm list
+	- other link
+	- when block
+	- footer
+	*/
+	body {
+		font-family: "Roboto", "Arial", "Sans-serif";
+	}
+	.grid-wrapper {
+		min-height: 100%;
+		display: grid;
+		grid-template: [start] "header" 100px [row2]
+		[row2] "main" 1fr [row3]
+		[row3] "when" 544px [row4]
+		[row4] "footer" 221px [row-end]/ 1fr;
+		justify-content: end;
+	}
+
+		/***********************************
+					 header 	
+		************************************/
+
+	.header {
+		grid-area: header;
+			}
+	.header__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1200px;
+		height: 100px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.header__logo p{
+		font-weight: bold;
+		font-size: 36px;
+	}
+	.header__logo p:first-letter{
+		color: #DF1E3A
+	}
+	.header__nav {
+		font-weight: Regular;
+		font-size: 18px;
+	}
+	.nav li {
+		display: inline;
+		margin: 0px 0px 0px 24px;
+	}
+	.nav a {
+		color:black;
+	}
+
+		/***********************************
+					 main block 	
+		************************************/
+
+	.main {
+		grid-area: main;
+	}
+	.main__container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.main__container h1{
+		font-weight: bold;
+		font-size: 36px;
+		margin: 110px 0px 40px 0px;
+	}
+	.slaider-grid {
+		display: grid;
+		grid-template: [start] "slaider_logo stub" 1fr [row2]
+		[row2] "slaider slaider" 300px [row-end]/ 1fr 1fr;
+	}
+	.slaider-grid p {
+		font-weight: medium;
+		font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 30px;
+	}
+	.slaider_logo {
+		grid-area: slaider_logo;
+	}
+	.slaider_logo p {
+		font-size: 18px;
+		padding: 0px 20px 32px 0px;
+	}
+	.stub-block {
+		grid-area: stub;
+	}
+	.slaider {
+		grid-area: slaider;
+	}
+	.slaider img {
+		width: 500px;
+	}
+
+		/* Slaider slick*/
+	
+	/* Ограничивающая оболочка */
+	.slick-list {
+		overflow: hidden;
+	}
+	/* Лента слайдов */
+	.slick-track{
+		display: flex;
+		align-items: flex-start;
+	}
+	/* Конкретный слфйдер */
+	.slaider {
+		position: relative;
+		padding: 0px 60px;
+	}
+	.slaider .slick-arrow{
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+	}
+	.slaider .slick-arrow.slick-prev{
+		left: 30px;
+	}
+	.slaider .slick-arrow.slick-next{
+		right: 30px;
+	}
+	.slaider__item {
+		text-align: center;
+	}
+	
+
+			/***********************************
+					 pharm list 	
+		************************************/
+
+	.items-grid {
+		display: grid;
+		grid-template: [start] "pharm1 pharm2" 1fr [row2]
+		[row2] "pharm3 pharm3" 1fr [row-end] / 1fr 1fr;
+		grid-gap: 80px;
+	}
+	.image-item1 {
+		grid-area: pharm1;
+	}
+	.image-item2 {
+		grid-area: pharm2;
+	}
+	.image-item3 {
+		grid-area: pharm3;
+	}
+
+		/***********************************
+					 other link 	
+		************************************/
+
+	.other_link_grid {
+		display: grid;
+		grid-template: [start] "aggregators ymarket" 1fr [row-end] / 1fr 1fr;
+	}
+	.other_link__aggregators {
+		display: grid;
+		grid-area: aggregators;
+		height: 225px;
+		align-content: space-between;
+		font-weight: medium;
+		font-size: 18px;
+		padding: 10px 10px 40px 0px;
+	}
+	.other_link__aggregators__list {
+		display: flex;
+	}
+	.other_link__aggregators__list a {
+		display: flex;
+		font-weight: medium;
+		font-size: 24px;
+		color: #DF1E3A;
+	}
+	.arrow-1 {
+		cursor: pointer;
+		position: relative;
+		width: 24px;
+		height: 10px;
+		margin: 0px 80px 0px 8px;
+	}
+	.arrow-1 div {
+		position: relative;
+		top: 12px;
+		width: 24px;
+		height: 2px;
+		background-color: #DF1E3A;
+		left:0;
+		display: block;
+	}
+	.arrow-1 div::after {
+		content: '';
+		position: absolute;
+		width: 5px;
+		height: 1.5px;
+		top: -2px;
+		right: -1px;
+		background-color: #DF1E3A;
+		transform: rotate(45deg);
+	}
+	.arrow-1 div::before {
+		content: '';
+		position: absolute;
+		width: 5px;
+		height: 1.5px;
+		top: 2px;
+		right: -1px;
+		background-color: #DF1E3A;
+		transform: rotate(-45deg);
+	}
+	.arrow-1:hover {
+		animation: arrow-1 1s linear infinite;
+	}
+	@keyframes arrow-1 {
+		0% {
+			 left:0;
+		}
+		50% {
+			 left:10px;
+		}
+		100% {
+			 left:0;
+		}
+	}
+	.other_link__ymarket {
+		display: grid;
+		grid-area: ymarket;
+		align-content: end;
+	}
+	.other_link__ymarket p {
+		font-weight: medium;
+		font-size: 18px;
+		font-family: Roboto;
+		line-height: 21px;
+	}
+
+			/***********************************
+					 when block 	
+		************************************/
+
+	.when-use {
+		grid-area: when;
+		background: linear-gradient(to right, rgba(79, 172, 254, 1), rgba(0, 242, 254, 1));
+	}
+
+	.when__container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.when__grid {
+		display: grid;
+		grid-template: [start] "item1 item2 item3" 1fr [row-end] / 1fr 1fr 1fr;
+		
+	}
+	.when__item {
+		margin: 120px auto 0px auto;
+		text-align: center;
+		color: #ffffff;
+	}
+	.when__item1 {
+		grid-area: item1;
+	}
+	.when__item2 {
+		grid-area: item2;
+	}
+	.when__item3 {
+		grid-area: item3;
+	}
+	#firstP {
+		margin: 40px 0px 16px 0px;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 28px;
+	}
+	.when__item p {
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 21px;		
+	}
+		/***********************************
+					 footer 	
+		************************************/
+
+	.footer {
+		grid-area: footer;
+		background-color: #7D7D7D;
+	}
+	.footer__container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.footer__grid {
+		display: grid;
+		grid-template: [start] "info links" 1fr [row-end] / 1fr 1fr;
+		margin: 40px auto;
+		padding: 0px 15px 0px 15px;
+		color: #ffffff;
+	}
+	.footer__info {
+		grid-area: info;
+		font-style: normal;
+		font-weight: 400;
+	}
+	.footer__info p {
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 53px;
+	}
+	.footer__info a {
+		font-size: 12px;
+		line-height: 14px;
+		color: #ffffff;
+	}
+	.footer__links {
+		grid-area: links;
+		display: flex;
+	}
+	.footer__links ul {
+		margin-left: 60px;
+		margin-right: 113px;
+	}
+	.footer__links li {
+		margin-bottom: 16px;
+		white-space: nowrap;
+	}
+	.footer__links li a {
+		margin-bottom: 16px;
+		color: #ffffff;
+		font-family: Roboto;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 21px;
+	}
